@@ -28,10 +28,11 @@
       color: white;
     }
 
+
     .myHeading {
       color: #FF00D6;
     }
-    .listaStilizzata{
+    #listaStilizzata{
       color: blue;
       font-family: Arial, Helvetica, sans-serif;
     }
@@ -71,7 +72,7 @@
       <li>3rd</li>
       <li>4rd</li>
     </ul>
-    <ol class="listaStilizzata">
+    <ol id="listaStilizzata">
       <li>uno</li>
       <li>due</li>
       <li>tre</li>
@@ -175,9 +176,22 @@
     const paintItGreen = function () {
       const allTheLis = document.querySelectorAll('#firstList li,#secondList') 
       allTheLis.forEach((singleLi) =>{
-        singleLi.style.backgroundColor= "green";
+        singleLi.style.backgroundColor= "yellowgreen";
       })
     }
+
+     /*Esercizio Extra 
+       cambia il background alla lista numerata
+       */
+
+       const paintItViolet = function() {
+         const listNum = document.querySelectorAll('ol,#listaStilizzata')
+         listNum.forEach((singleLi) =>{
+          singleLi.style.backgroundColor= "violet";
+         })
+       }
+       document.addEventListener('DOMContentLoaded', paintItViolet);
+
     paintItGreen();
     /* ESERCIZIO 9
        Scrivi una funzione che rimuova l'ultima lettera dall'h1 ogni volta che l'utente lo clicca
